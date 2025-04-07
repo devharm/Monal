@@ -237,6 +237,7 @@
 		C1F5C7AA2775DA000001F295 /* MLContactSoftwareVersionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F5C7A82775DA000001F295 /* MLContactSoftwareVersionInfo.m */; };
 		C1F5C7AC2777621B0001F295 /* ContactResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F5C7AB2777621B0001F295 /* ContactResources.swift */; };
 		C1F5C7AF2777638B0001F295 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = C1F5C7AE2777638B0001F295 /* OrderedCollections */; };
+		C66252FE2DA3FECB00C781F4 /* LibMonalRustSwiftBridge in Frameworks */ = {isa = PBXBuildFile; productRef = C66252FD2DA3FECB00C781F4 /* LibMonalRustSwiftBridge */; };
 		D02192F32C89BB3800202A59 /* BlockedUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02192F22C89BB3800202A59 /* BlockedUsers.swift */; };
 		D09B51F62C7F30DD008D725B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B2A4BA1B73061400272E63 /* Images.xcassets */; };
 		D0FA79B12C7E5C7400216D2A /* ServerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA79B02C7E5C7400216D2A /* ServerDetails.swift */; };
@@ -854,6 +855,7 @@
 				84E231F32C16A9CE00735FB7 /* SVGView in Frameworks */,
 				849ADF432BACF0360009BCD7 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
 				8414AE002A7ABC4300EFFCCC /* LibMonalRustSwiftBridge in Frameworks */,
+				C66252FE2DA3FECB00C781F4 /* LibMonalRustSwiftBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1667,6 +1669,7 @@
 				849ADF402BACF0360009BCD7 /* CocoaLumberjackSwift */,
 				849ADF422BACF0360009BCD7 /* CocoaLumberjackSwiftLogBackend */,
 				84E231F22C16A9CE00735FB7 /* SVGView */,
+				C66252FD2DA3FECB00C781F4 /* LibMonalRustSwiftBridge */,
 			);
 			productName = monalxmpp;
 			productReference = 26CC579223A0867400ABB92A /* monalxmpp.framework */;
@@ -1820,6 +1823,7 @@
 				84F194CF2C15197200F0A994 /* XCRemoteSwiftPackageReference "FrameUp" */,
 				84E231F12C16A9CE00735FB7 /* XCRemoteSwiftPackageReference "SVGView" */,
 				84774DF92D1A956400B15E51 /* XCRemoteSwiftPackageReference "ExyteChat" */,
+				C66252FC2DA3FECB00C781F4 /* XCLocalSwiftPackageReference "../rust/LibMonalRustSwiftBridge" */,
 			);
 			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
@@ -1935,9 +1939,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MonalUITests/Pods-MonalUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MonalUITests/Pods-MonalUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1996,9 +2004,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MonalXMPPUnitTests/Pods-MonalXMPPUnitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MonalXMPPUnitTests/Pods-MonalXMPPUnitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2054,9 +2066,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Monal/Pods-Monal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Monal/Pods-Monal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4713,6 +4729,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		C66252FC2DA3FECB00C781F4 /* XCLocalSwiftPackageReference "../rust/LibMonalRustSwiftBridge" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../rust/LibMonalRustSwiftBridge;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		841898A82957712000FEC77D /* XCRemoteSwiftPackageReference "ViewExtractor" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -4816,6 +4839,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C1F5C7AD2777638B0001F295 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
+		};
+		C66252FD2DA3FECB00C781F4 /* LibMonalRustSwiftBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LibMonalRustSwiftBridge;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
